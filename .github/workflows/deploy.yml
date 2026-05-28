@@ -20,7 +20,7 @@ concurrency:
 jobs:
   # Check deployment configuration
   config:
-    if: github.repository_owner != 'HugoBlox'
+    if: github.repository_owner != 'aasidorova1'
     runs-on: ubuntu-latest
     outputs:
       deploy-host: ${{ steps.check.outputs.host }}
@@ -60,7 +60,7 @@ jobs:
   # Build website using reusable workflow (always runs for CI)
   build:
     needs: config
-    if: github.repository_owner != 'HugoBlox'
+    if: github.repository_owner != 'aasidorova1'
     uses: ./.github/workflows/build.yml
     secrets: inherit
 
